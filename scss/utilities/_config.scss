@@ -6,15 +6,19 @@ $font-family--primary   : "Poppins", Helvetica, Arial, sans-serif;
 $font-weight--thin       : 100;
 $font-weight--light      : 300;
 $font-weight--medium     : 400;
-$font-weight--bold       : 700;
+$font-weight--bold       : 600;
+$font-weight--very-bold  : 700;
 $font-weight--ultra-bold : 900;
 
 
 // Descriptive Base Colours
 $white      : #fff;
 
-$shuriken   : #323544;
-$black-howl : #212330;
+$shuriken           : #323544;
+$black-howl         : #212330;
+$ironbreaker-metal  : #a3a8ac;
+$seljuk-blue        : #4387f6;
+$fennel-fiesta      : #00b67b;
 
 
 // Colour Usage
@@ -25,6 +29,7 @@ $colour-foot-btn  : $black-howl;
 // Text
 $base--font-size        : 16px;
 $base--letter-spacing   : .4px;
+$base--line-height      : 1.42857143;
 
 // Breakpoints
 $brk--xs    : 1px;

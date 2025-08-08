@@ -1,5 +1,48 @@
+.container-welcome {
+  padding: 0;
+}
+
 .welcome {
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
   font-size: 1em;
+  background-color: $colour-foot-bg;
+  position: relative;
+  letter-spacing: $base--letter-spacing;
+  padding: 50px 15px;
+  color: $white;
+  line-height: 1.875rem;    
+
+  & h1 {
+    font-size: 2.25rem;
+    font-weight: $font-weight--bold;
+    line-height: 1.1;
+    margin-bottom: 40px;
+  }
+
+  & p {
+    margin-top: 0;
+    margin-bottom: 26px;
+    }
+  &__text {
+    & a {
+      cursor: pointer;
+    }
+
+    &--button {
+      @include button-base-style;
+      & svg {
+        display: inline;
+        vertical-align: middle;
+        fill: $white;
+        width: 21px;
+        height: 35px;
+        margin-left: 12px;
+      }
+    }
+  }
+
 
   &__clients {
     &--stars {
@@ -10,6 +53,42 @@
         stroke: orange;
         fill: orange;
       }
+    }
+
+    &--quote {
+      font-style: italic;
+      font-size: 1.3rem;
+      font-weight: $font-weight--bold;
+    }
+
+    &--quote-attrib {
+      font-weight: $font-weight--bold;
+      color: $ironbreaker-metal;
+      font-size: 1.1rem;
+      & a {
+        text-decoration: none;
+        color: $white;
+      }
+    }
+
+    &--btn-review {
+      @include button-base-style;
+      & svg {
+        display: inline;
+        vertical-align: middle;
+        fill: $white;
+        width: 21px;
+        height: 35px;
+        margin-left: 12px;
+      }
+    }
+
+    &--btn-google {
+      background-color: $seljuk-blue;
+    }
+
+    &--btn-trustpilot {
+      background-color: $fennel-fiesta;
     }
   }
 }

@@ -1,0 +1,18 @@
+// Button base styling
+
+@mixin button-base-style {
+  display: inline-block;
+  padding: 10px 30px;
+  margin-bottom: 17px;
+  color: $white;
+  background-color: $colour-foot-btn;
+  border-radius: 6px;
+  border: none;
+  font-size: 20px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-weight: $font-weight--medium;
+  letter-spacing: $base--letter-spacing;
+  line-height: 35px;
+}
