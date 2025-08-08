@@ -14,17 +14,23 @@ $font-weight--ultra-bold : 900;
 $white      : #fff;
 
 $shuriken   : #323544;
+$black-howl : #212330;
 
 
 // Colour Usage
-$colour-bg  : $shuriken;
+$colour-foot-bg     : $shuriken;
+$colour-foot-btn  : $black-howl;
 
 
 // Text
-$base__font-size    : 16px;
+$base--font-size        : 16px;
+$base--letter-spacing   : .4px;
 
 // Breakpoints
 $brk--xs    : 1px;
 $brk--sm    : 768px;
 $brk--md    : 992px;
 $brk--lg    : 1260px;
+
+// Logo sizing
+$logo--format   : 72.5%;
