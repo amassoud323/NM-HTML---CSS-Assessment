@@ -3,3 +3,8 @@
 @function em($target, $context: $base--font-size) {
   @return ($target / $context) * 1em;
 }
+
+// Image URLs
+@function img($filename) {
+  @return url("#{$img-base-path}/#{$filename}");
+}

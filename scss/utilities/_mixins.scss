@@ -6,6 +6,7 @@
   margin-bottom: 17px;
   color: $white;
   background-color: $colour-foot-btn;
+  border: 1px solid transparent;
   border-radius: 6px;
   border: none;
   font-size: 20px;
@@ -15,4 +16,18 @@
   font-weight: $font-weight--medium;
   letter-spacing: $base--letter-spacing;
   line-height: 35px;
+  cursor: pointer;
+}
+
+// Button arrow styling
+
+@mixin button-icon {
+  svg {
+    display: inline;
+    vertical-align: middle;
+    fill: $white;
+    width: 21px;
+    height: 35px;
+    margin-left: 12px;
+  }
 }

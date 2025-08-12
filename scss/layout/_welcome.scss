@@ -73,14 +73,7 @@
 
     &--btn-review {
       @include button-base-style;
-      & svg {
-        display: inline;
-        vertical-align: middle;
-        fill: $white;
-        width: 21px;
-        height: 35px;
-        margin-left: 12px;
-      }
+      @include button-icon;
 
       @media (min-width: $brk--lg) {
         display: inline-flex;
