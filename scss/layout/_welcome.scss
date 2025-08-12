@@ -81,14 +81,49 @@
         height: 35px;
         margin-left: 12px;
       }
+
+      @media (min-width: $brk--lg) {
+        display: inline-flex;
+        padding: 10px 24px;
+      }
     }
 
     &--btn-google {
       background-color: $seljuk-blue;
+
+      @media (min-width: $brk--lg) {
+        margin-right: 5px;
+      }
     }
 
     &--btn-trustpilot {
       background-color: $fennel-fiesta;
     }
   }
+
+  &__text, &__clients {
+    @media (min-width: $brk--sm) {
+      padding: 0 15px;
+    }
+
+    @media (min-width: $brk--md) {
+      flex: 0 0 auto;
+      max-width: 50%;
+      padding: 0 15px;
+    }
+
+    @media (min-width: $brk--lg) {
+      max-width: 600px;
+    }
+  }
+
+  @media (min-width: $brk--lg) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 1200px;
+      padding: 50px 15px;
+      margin: 0 auto;
+  } 
 }
