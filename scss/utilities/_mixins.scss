@@ -31,3 +31,32 @@
     margin-left: 12px;
   }
 }
+
+// Scrolling logo effect to emulate owl carousel without using JS
+@mixin logo-scrollbars {
+  //Use overflow-x and make it a scroll container to emulate JS functionality without actually using JS
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  margin: 50px 0;
+ 
+  // Hide scrollbar 
+  // Chrome/Safari/Opera
+  .partners::-webkit-scrollbar {
+    display: none;
+  }
+  //Firefox/Edge
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  // Grey base image styling that colourises when hovered
+  &--img {
+    filter: grayscale(100);
+    margin: 0 50px;
+    height: 70px;
+
+    &:hover {
+      filter: none;
+    }
+  }
+}
