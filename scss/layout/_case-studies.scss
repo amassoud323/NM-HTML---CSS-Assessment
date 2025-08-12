@@ -1,10 +1,27 @@
 .case-studies {
   @include logo-scrollbars;
 
-  &--img {
-    max-height: 70px;
-    max-width: 200px;
-    height: auto;
-    object-fit: contain;
+  &__content {
+    &--img {
+      max-height: 70px;
+      max-width: 200px;
+      height: auto;
+      object-fit: contain;
+   }
+
+   &--text {
+    display: none;
+   }
+
+   &--text:hover { //this bit doesn't work, start here tomorrow
+      display: inline;
+    }
   }
+  
 }
+
+/* ideas for how to implement pop up boxes:
+- include html content with same class as a p for each company
+- set display: none
+- set to appear above with :hover (this bit will take some work as i basically have no idea how)
+*/

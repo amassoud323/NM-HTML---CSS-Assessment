@@ -49,8 +49,8 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 
-  // Grey base image styling that colourises when hovered (nb using --img tag here does make it slightly limited in scope but i think it's simpler this way as i'm only using the mixin twice)
-  &--img {
+  // Grey base image styling that colourises when hovered (nb using __img tag here does make it slightly limited in scope but i think it's simpler this way as i'm only using the mixin twice)
+  & [class*="--img"] {
     filter: grayscale(100);
     margin: 0 50px;
     height: 70px;
