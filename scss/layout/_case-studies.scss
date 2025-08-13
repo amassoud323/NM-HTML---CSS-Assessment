@@ -17,8 +17,8 @@
     }
 
     &--text {
-      display: inline-block;
-      visibility: hidden;
+      display: block;
+      visibility: hidden; 
       width: 200px;
       background-color: $colour-foot-btn;
       color: $white;
