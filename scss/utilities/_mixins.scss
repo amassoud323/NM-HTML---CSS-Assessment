@@ -33,26 +33,36 @@
 }
 
 // Scrolling logo effect to emulate owl carousel without using JS
-@mixin logo-scrollbars {
-  //Use overflow-x and make it a scroll container to emulate JS functionality without actually using JS
-  display: flex;
-  flex-direction: row;
-  overflow-x: scroll;
-  margin: 50px 0;
- 
-  // Hide scrollbar 
-  // Chrome/Safari/Opera
-  &::-webkit-scrollbar {
-    display: none;
-  }
-  //Firefox/Edge
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 
-  // Grey base image styling that colourises when hovered (nb using __img tag here does make it slightly limited in scope but i think it's simpler this way as i'm only using the mixin twice)
-  & [class*="--img"] {
+// this might need a rewrite in conjunction with _case-studies
+@mixin logo-scrollbars {
+
+  .scroll-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    
+    overflow-x: scroll;
+    gap: 75px;
+    margin: 50px 0;
+
+    // Hide scrollbar 
+    // Chrome/Safari/Opera
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    //Firefox/Edge
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  &__content {
+    position: relative;
+  }
+  
+
+  // Grey base image styling that colourises when hovered (nb using --img tag here does make it slightly limited in scope but i think it's simpler this way as i'm only using the mixin twice)
+  & .scroll-logo {
     filter: grayscale(100);
-    margin: 0 50px;
     height: 70px;
     width: auto;
 

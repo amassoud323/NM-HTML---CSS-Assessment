@@ -1,20 +1,42 @@
+//COME BACK TO THIS -- IT DOESN'T WORK. might need a rewrite entirely or just tweaking
+
 .case-studies {
   @include logo-scrollbars;
+  //overflow: clip;
+  max-height: 170px;
 
   &__content {
+    position: relative;
+    //overflow: visible;
+
     &--img {
       max-height: 70px;
       max-width: 200px;
       height: auto;
       object-fit: contain;
-   }
+    }
 
-   &--text {
-    display: none;
-   }
+    &--text {
+      display: inline-block;
+      visibility: hidden;
+      width: 200px;
+      background-color: $colour-foot-btn;
+      color: $white;
+      text-align: center;
+      padding: 5px;
+      border: 1px solid transparent;
+      border-radius: 1px;
+      position: absolute;
+      z-index: 1;
+      bottom: 100%;
+      left: 50%;
+      margin-left: 100px;
+    }
 
-   &--text:hover { //this bit doesn't work, start here tomorrow
-      display: inline;
+    &--img:hover ~ &--text { //this bit doesn't work, start here tomorrow
+        visibility: visible;
+        opacity: 1;
+        
     }
   }
   
