@@ -66,12 +66,9 @@
     }
 
     &--read-more {
-      @include button-base-style;
-      background-color: #f7b322;
-      border-color: #f7b322;
-      font-size: 1.063rem;
-      padding: 5px 15px;
-      border-radius: 3px;
+      @include button-read-more;
+      background-color: $glistening-dawn;
+      border-color: $glistening-dawn;
     }
 
     .btn-blue {

@@ -32,6 +32,14 @@
   }
 }
 
+// Read more buttons
+@mixin button-read-more {
+  @include button-base-style;
+  padding: 5px 15px;
+  font-size: 1.063rem;
+  border-radius: 3px;
+}
+
 // Scrolling logo effect to emulate owl carousel without using JS
 
 // this might need a rewrite in conjunction with _case-studies
@@ -90,5 +98,53 @@
     margin-left: 7px;
     height: 26px;
     width: 26px;
+  }
+}
+
+// Icon styling
+
+@mixin icons {
+  display: flex;  
+  width: 65px;
+  height: 65px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 50%;
+  svg {
+    fill: $white; 
+    max-width: 60%;
+    max-height: 50%;     
+  }  
+}
+
+// Paragraph text
+
+@mixin para-style {
+  font-size: .8125rem;
+  line-height: 1.375rem;
+  font-weight: $font-weight--medium;
+}
+
+// 'Our Services' card layout properties
+@mixin services-layout {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+}
+
+// Inverts colours of services cards when hovering
+@mixin invert-service-colours () {
+  background-color: var(--color);
+  h2, p {color: white;}
+
+  .services__section--icon {
+    background-color: white;
+    svg { fill: var(--color); }
+  }
+
+  button {
+    background-color: $white;
+    color: var(--color);
   }
 }

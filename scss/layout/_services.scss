@@ -1,0 +1,139 @@
+.services {
+  @include services-layout;
+  
+  // base layout
+  &__section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid $grey;
+    box-shadow: 0 3px 35px rgba(0, 0, 0, .1);
+    border-radius: 15px;
+    padding: 20px 30px;
+    text-align: center;
+    margin: 0;
+    transition: all 0.5s ease;
+    transform: translateY(0);
+
+    // set colour for each section, based on icon background -- will use this to invert colours with mixin when hovering
+    &--base { --color: #{$bay-view}; }
+    &--blue {--color: #{$magical-merlin}; }
+    &--green {--color: #{$ufo-green}; }
+    &--red {--color: #{$valencia}; }
+    &--purple {--color: #{$violet-frog}; }
+    &--crimson {--color: #{$radical-red}; }
+    &--red-brown {--color: #{$punch}; } 
+
+    &--icon {
+      @include icons; 
+      background-color: var(--color, $dark-grey);
+      margin-bottom: 17px;
+    }
+
+    &--read-more {
+      @include button-read-more;
+      background-color: var(--color, $dark-grey);
+    }
+
+    .btn--orange {
+      background-color: $glistening-dawn;
+      border-color: $glistening-dawn;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: $font-weight--medium;
+      padding-bottom: 10px;
+      color: $pauper;
+      margin: 0;
+      margin-bottom: 3px;
+      line-height: 1.1;
+    }
+
+    p {
+      @include para-style;
+      color: $pauper;
+      padding-bottom: 13px;
+      margin: 0;
+    }
+
+    &:hover {
+      @include invert-service-colours;
+      transform: translateY(-10px);
+    }
+
+  }
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    padding-top: 20px;
+    width: 100%;
+    }
+
+    h1 {
+      font-size: 2.7rem;
+      font-weight: $font-weight--medium;
+      color: $pauper;
+      align-items: center;
+      margin: 0;
+      float: left;
+    }
+
+    .our-work--start {
+      display: none;
+
+      @media (min-width: $brk--sm) {
+        @include view-more-link;
+        margin: 0;
+        float: right;
+        font-size: 2.25rem;
+        svg {
+          height: 36px;
+          width: 36px;
+        }
+      }
+    }
+
+    .our-work--end {
+      @include view-more-link;
+
+      @media (min-width: $brk--sm) {
+        display: none;
+      }
+    }
+
+.grid-wrapper-1 {
+    @include services-layout;
+
+    @media (min-width: $brk--md) {
+      flex-direction: row;
+      width: 100%;
+      flex-wrap: nowrap;
+      column-gap: 30px;
+    }
+  }
+
+  .grid-wrapper-2 {
+    @include services-layout;
+  
+    @media (min-width: $brk--sm) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    @media (min-width: $brk--md) {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      flex-wrap: nowrap;
+      column-gap: 30px;
+    }
+  }
+
+}
+
+  
