@@ -80,7 +80,10 @@
 
     @media (min-width: $brk--sm) {
       width: 47.8%;
-      
+    }
+
+    @media (min-width: $brk--lg) {
+      width: 31.5%;
     }
   }
 
@@ -89,7 +92,7 @@
       visibility: collapse;
     }
 
-    @media (min-width: $brk--md) {
+    @media (min-width: $brk--lg) {
       visibility: visible;
     }
   }
@@ -111,8 +114,6 @@ h1 {
   color: $pauper;
   font-size: 2.25rem;
   font-weight: $font-weight--bold;
-  // margin: 50px 0 28px 0;
-
 }
 
 .more-news--start {
