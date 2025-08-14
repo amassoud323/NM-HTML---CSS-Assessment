@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  .icon {
+    @include icons;
+  }
+  
+  &__menu-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $colour-foot-btn;
+    width: 40px;
+    height: 56px;
+    line-height: 46px;
+    padding: 5px 15px;
+
+    &--bar {
+      width: 85%;
+      height: 5px;
+      margin: 5%;
+      background-color: $white;
+    }
+  }
+
+}
