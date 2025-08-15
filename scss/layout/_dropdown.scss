@@ -38,4 +38,14 @@ nav {
       @include invert-dropdown-hover;
     }
   }
+
+  &__section__menu {
+    a {
+      text-decoration: none;
+      color: $white;
+    }
+    .icon-gears {
+      fill: $white;
+    }
+  }
 }
