@@ -1,28 +1,114 @@
 .header {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  gap: 30px;
+  padding: 20px 0;
 
-  .icon {
-    @include icons;
-  }
-  
-  &__menu-button {
+  &--row {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    background-color: $colour-foot-btn;
-    width: 40px;
-    height: 56px;
-    line-height: 46px;
-    padding: 5px 15px;
 
-    &--bar {
-      width: 85%;
-      height: 5px;
-      margin: 5%;
-      background-color: $white;
+    @media (min-width: $brk--sm) {
+      justify-content: space-between;
     }
   }
 
+  &__logo {
+    display: flex;
+    max-width: 62.5%;
+    align-items: center;
+    img {
+      width: 100%;
+    }
+
+    @media (min-width: $brk--sm) {
+      max-width: 48%;
+    }
+  }
+
+  &__icon {
+    @include icons;
+    margin: 0 0 0 10px;
+    align-items: center;
+    svg {
+      fill: $colour-foot-btn;
+    }
+
+    @media (min-width: $brk--sm) {
+      display: none;
+    }
+  }
+  
+  &__button {
+    @include button-base-style;
+    &--icon {
+      @include icons;
+    }
+    display: none;
+
+    @media (min-width: $brk--md) {
+      display: flex;
+    }
+  }
+
+  &__searchbar {
+    &--desktop {
+      display: none;
+
+      @media (min-width: $brk--sm) {
+        @include header-searchbar;
+        width: 33%;
+        margin-top: 0;
+        height: 56px;
+        input[name="search"] {
+          background-color: $white;
+          border: 1px solid $grey;
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        }
+
+        button {
+          background-color: $manatee;
+          padding: 0 17px;
+          border: none;
+          border-radius: 0 3px 3px 0;
+          box-shadow: 0 1px 1px rgba(0,0,0,.075);
+          svg {
+            background-color: $manatee;
+            fill: white;
+            height: 100%;
+            width: 23px;
+          }
+        }
+      }
+    }
+
+    &--mobile {
+      @include header-searchbar;
+
+      @media (min-width: $brk--sm) {
+        display: none;
+      }
+    }
+  }
+
+  &__menu-button {
+    display: flex;
+    float: right;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color: $pauper;
+    height: 56px;
+    padding: 10px 15px;
+    border-radius: 3px;
+    
+    &--bar {
+      width: 33px;
+      height: 4px;
+      margin: 3px 0;
+      background-color: $white;
+      justify-content: center;
+    }
+  }
 }

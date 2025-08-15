@@ -148,3 +148,39 @@
     color: var(--color);
   }
 }
+
+// Header searchbar styling
+@mixin header-searchbar {
+  display: flex;
+  width: 100%;
+  margin-top: 15px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+
+  input[name="search"] {
+    color: $dark-grey;
+    background-color: $mercury;
+    padding: 10px 15px;
+    font-size: .875rem;
+    font-family: $font-family--primary;
+    border: 2px solid rgba(0, 0, 0, .1);
+    border-right: none;
+    border-radius: 2px 0 0 2px;
+    width: 100%;
+  }
+
+  button {
+    background-color: $mercury;
+    border: 2px solid rgba(0, 0, 0, .1);
+    border-left: none;
+    border-radius: 0 2px 2px 0;
+    margin-left: -2px;
+  }
+
+  svg {
+    height: 20px;
+    width: 20px;
+    background-color: $mercury;
+    color: $colour-foot-btn;
+    margin: 0 3px;
+  }
+}
