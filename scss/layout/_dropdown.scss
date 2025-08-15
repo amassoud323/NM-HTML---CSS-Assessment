@@ -1,0 +1,41 @@
+nav {
+  background-color: $colour-foot-bg;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  // justify-content: space-between;
+  text-align: center;
+  line-height: 1;
+  text-transform: uppercase;
+  width: 1200px;
+
+  &__section {
+    @include service-colors;
+    @include invert-dropdown-colours;
+    width: 14.3%;
+    
+    p {
+      margin-top: 0;
+      font-size: 1.125rem;
+    }
+
+    small {
+      font-size: .625rem;
+    }
+
+    &--icon {
+      margin: auto;
+      margin-bottom: -10px;
+      margin-top: 10px;
+      height: 45px;
+      width: 45px;
+    }
+
+    &:hover {
+      @include invert-dropdown-hover;
+    }
+  }
+}

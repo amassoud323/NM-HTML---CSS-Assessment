@@ -133,10 +133,43 @@
   row-gap: 30px;
 }
 
+// Colour-codes services section for use in services and dropdown menu
+@mixin service-colors {
+    &--base { --color: #{$bay-view}; }
+    &--blue {--color: #{$magical-merlin}; }
+    &--green {--color: #{$ufo-green}; }
+    &--red {--color: #{$valencia}; }
+    &--purple {--color: #{$violet-frog}; }
+    &--crimson {--color: #{$radical-red}; }
+    &--red-brown {--color: #{$punch}; } 
+
+    &--icon {
+      @include icons; 
+      background-color: var(--color, $dark-grey);
+      margin-bottom: 17px;
+    }
+
+    &--read-more {
+      @include button-read-more;
+      background-color: var(--color, $dark-grey);
+    }
+  }
+
+// Inverts icon colours specifically for dropdown
+@mixin invert-dropdown-colours () {
+  background-color: $pauper;
+  p {color: $white}
+
+  .dropdown__section--icon {
+    background-color: $pauper;
+    svg { fill: var(--color); }
+  }
+}
+
 // Inverts colours of services cards when hovering
 @mixin invert-service-colours () {
   background-color: var(--color);
-  h2, p {color: white;}
+  h2, p { color: white; }
 
   .services__section--icon {
     background-color: white;
@@ -146,6 +179,17 @@
   button {
     background-color: $white;
     color: var(--color);
+  }
+}
+
+// Inverts colours of dropdown elements when hovering
+@mixin invert-dropdown-hover () {
+  background-color: var(--color);
+  p { color: white; }
+
+  .dropdown__section--icon {
+    background-color: var(--color);
+    svg { fill: white; }
   }
 }
 

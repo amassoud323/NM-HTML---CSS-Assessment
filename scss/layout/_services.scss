@@ -14,26 +14,7 @@
     margin: 0;
     transition: all 0.5s ease;
     transform: translateY(0);
-
-    // set colour for each section, based on icon background -- will use this to invert colours with mixin when hovering
-    &--base { --color: #{$bay-view}; }
-    &--blue {--color: #{$magical-merlin}; }
-    &--green {--color: #{$ufo-green}; }
-    &--red {--color: #{$valencia}; }
-    &--purple {--color: #{$violet-frog}; }
-    &--crimson {--color: #{$radical-red}; }
-    &--red-brown {--color: #{$punch}; } 
-
-    &--icon {
-      @include icons; 
-      background-color: var(--color, $dark-grey);
-      margin-bottom: 17px;
-    }
-
-    &--read-more {
-      @include button-read-more;
-      background-color: var(--color, $dark-grey);
-    }
+    @include service-colors;
 
     .btn--orange {
       background-color: $glistening-dawn;
