@@ -3,13 +3,17 @@
   flex-direction: row;
   flex-wrap: wrap;
   padding: 20px 0;
+  
+  a { text-decoration: none; }
 
   &--row {
     display: flex;
     align-items: center;
-
+    width: 100%;
+    
     @media (min-width: $brk--sm) {
       justify-content: space-between;
+      gap: 20px;
     }
   }
 
@@ -17,12 +21,17 @@
     display: flex;
     max-width: 62.5%;
     align-items: center;
+    margin-right: auto;
     img {
       width: 100%;
     }
 
     @media (min-width: $brk--sm) {
       max-width: 48%;
+    }
+
+    @media (min-width: $brk--md) {
+      max-width: 32%;
     }
   }
 
@@ -41,9 +50,34 @@
   
   &__button {
     @include button-base-style;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px 10px 5px;
+    font-size: 1.125rem;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    
     &--icon {
       @include icons;
+      height: 100%;
+      width: 100%;
+      padding: 0;
+      svg {
+        height: 23px;
+        width: 37px;
+        margin: 0;
+      }
     }
+
+    &--blue {
+      background-color: $magical-merlin;
+    }
+
+    &--grey {
+      background-color: $manatee  ;
+    }
+
     display: none;
 
     @media (min-width: $brk--md) {
@@ -56,34 +90,19 @@
       display: none;
 
       @media (min-width: $brk--sm) {
-        @include header-searchbar;
-        width: 33%;
-        margin-top: 0;
-        height: 56px;
-        input[name="search"] {
-          background-color: $white;
-          border: 1px solid $grey;
-          box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-        }
+        @include header-searchbar-mobile;
+        @include header-searchbar-desktop;
+      }
 
-        button {
-          background-color: $manatee;
-          padding: 0 17px;
-          border: none;
-          border-radius: 0 3px 3px 0;
-          box-shadow: 0 1px 1px rgba(0,0,0,.075);
-          svg {
-            background-color: $manatee;
-            fill: white;
-            height: 100%;
-            width: 23px;
-          }
-        }
+      @media (min-width: $brk--md) {
+        @include header-searchbar-mobile;
+        @include header-searchbar-desktop;
+        width: 300px;
       }
     }
 
     &--mobile {
-      @include header-searchbar;
+      @include header-searchbar-mobile;
 
       @media (min-width: $brk--sm) {
         display: none;
@@ -93,7 +112,6 @@
 
   &__menu-button {
     display: flex;
-    float: right;
     flex-direction: column;
     align-items: center;
     align-content: center;
