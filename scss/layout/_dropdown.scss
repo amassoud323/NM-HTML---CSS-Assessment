@@ -41,19 +41,8 @@ nav {
       }
 
       &::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 0;
-        transform: translateX(-50%);
-        width: 0px;
-        height: 0px;
-        border-style: solid;
-        border-width: 30px 85.5px 0 85.5px;
+        @include triangle;
         border-color: var(--color) transparent transparent transparent;
-        transform: rotate(0deg);
-        opacity: 0;
-        pointer-events: none;
       }
 
       &:hover::after { 
