@@ -22,7 +22,7 @@ nav {
     position: relative;
 
     &__section {
-      @include service-colors;
+      @include implement-service-colors;
       @include invert-dropdown-colours;
       width: 14.3%;
       overflow: visible;

@@ -1,12 +1,21 @@
 .latest-news {
   display: flex;
   flex-wrap: wrap;
+  a { 
+    text-decoration: none; 
+    a:visited { 
+      text-decoration: underline; 
+      color: $dark-grey;
+    }
+  }
   
   &__article {
-    border: 1px solid black;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
     box-shadow: 0 4px 20px 0px lightgrey;
     max-width: 100%;
     margin-bottom: 30px;
+    @include raise-up;
 
     img {
       width: 100%;
@@ -119,7 +128,6 @@ h1 {
   @media (min-width: $brk--sm) {
     @include view-more-link;
     margin: 0;
-    
   }
 }
 

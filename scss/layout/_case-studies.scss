@@ -15,27 +15,59 @@
       object-fit: contain;
     }
 
-    &--text {
-      display: block;
+    &--tooltip {
+      position: absolute;
+      z-index: 10;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -100px;
+      margin-bottom: 50px;
       visibility: hidden; 
       opacity: 0;
       transition: opacity 0.1s;
-      width: 200px;
-      background-color: $colour-foot-btn;
+      width: 280px;
+      background-color: $colour-foot-bg;
       color: $white;
       text-align: center;
       padding: 5px;
       border: 1px solid transparent;
-      border-radius: 1px;
-      position: absolute;
-      z-index: 100;
-      bottom: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      margin-bottom: 10px;
+      border-radius: 3px;
+      .tooltip-arrow {
+        width: 0;
+        height: 0;
+        border-width: 40px 36px 0 36px;
+        border-style: solid;
+        display: inline-block;
+        border-color: $colour-foot-bg transparent transparent transparent;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -40px;
+      }
+
+      .tooltip-text {
+        padding: 12px;
+        h3 { font-size: 1.125rem; }
+        p { font-size: .8125rem; ;}
+        .btn {
+          @include button-base-style;
+          @include service-colors;
+          background-color: var(--color);
+          font-size: 16px;
+          line-height: 1.1rem;
+          padding: 10px;
+          width: 100%;
+          vertical-align: middle;
+          svg { 
+            fill: $white; 
+            padding-left: 0 10px;
+          }
+        }
+      }
+      
     }
 
-    &--img:hover ~ &--text { 
+    &--img:hover ~ &--tooltip { 
         visibility: visible;
         opacity: 1;
     }

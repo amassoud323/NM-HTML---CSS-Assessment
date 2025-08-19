@@ -45,12 +45,12 @@
 // this might need a rewrite in conjunction with _case-studies
 @mixin logo-scrollbars {
 
-  .scroll-temp {
-    overflow-x: hidden;
+  .scroll-wrapper {
+    //overflow-x: hidden;
     overflow-y: visible;
     width: 100%;
   
-    .scroll-wrapper {
+    .scroll-container {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
@@ -99,6 +99,7 @@
   font-size: 1.625rem;
   color: $pauper;
   font-weight: $font-weight--bold;
+  &:hover { text-decoration: underline; }
   svg {
     @include button-icon;
     fill: $pauper;
@@ -140,16 +141,22 @@
   row-gap: 30px;
 }
 
-// Colour-codes services section for use in services and dropdown menu
-@mixin service-colors {
-    &--base { --color: #{$bay-view}; }
-    &--blue {--color: #{$magical-merlin}; }
-    &--green {--color: #{$ufo-green}; }
-    &--red {--color: #{$valencia}; }
-    &--purple {--color: #{$violet-frog}; }
-    &--crimson {--color: #{$radical-red}; }
-    &--red-brown {--color: #{$punch}; } 
 
+// Colour codes for easy use throughout project without having to manually define each time
+@mixin service-colors {
+  &--base { --color: #{$bay-view}; }
+  &--blue { --color: #{$magical-merlin}; }
+  &--green { --color: #{$ufo-green}; }
+  &--red { --color: #{$valencia}; }
+  &--purple { --color: #{$violet-frog}; }
+  &--crimson { --color: #{$radical-red}; }
+  &--red-brown { --color: #{$punch}; } 
+  &--orange { --color: #{$glistening-dawn}; }
+}
+
+// Colour-codes services section for use in services and dropdown menu
+@mixin implement-service-colors {
+  @include service-colors;
     &--icon {
       @include icons; 
       background-color: var(--color, $dark-grey);
@@ -279,4 +286,13 @@
   opacity: 0;
   pointer-events: none;
   // Include colour in this format -- border-color: #COLOUR transparent transparent transparent;
+}
+
+// Raise-up effect when hovering
+@mixin raise-up {
+  transition: all 0.5s ease;
+  transform: translateY(0);
+  &:hover {
+    transform: translateY(-10px);
+  }
 }
