@@ -6,7 +6,7 @@
 
   &__content {
     position: relative;
-    overflow-y: visible;
+    
 
     &--img {
       max-height: 70px;
@@ -17,7 +17,9 @@
 
     &--text {
       display: block;
-      //visibility: hidden; 
+      visibility: hidden; 
+      opacity: 0;
+      transition: opacity 0.1s;
       width: 200px;
       background-color: $colour-foot-btn;
       color: $white;
@@ -26,10 +28,11 @@
       border: 1px solid transparent;
       border-radius: 1px;
       position: absolute;
-      z-index: 1000;
+      z-index: 100;
       bottom: 100%;
       left: 50%;
-      //margin-left: 100px;
+      transform: translateX(-50%);
+      margin-bottom: 10px;
     }
 
     &--img:hover ~ &--text { 

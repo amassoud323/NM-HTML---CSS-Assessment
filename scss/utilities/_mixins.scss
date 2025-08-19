@@ -45,37 +45,44 @@
 // this might need a rewrite in conjunction with _case-studies
 @mixin logo-scrollbars {
 
-  .scroll-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+  .scroll-temp {
     overflow-x: hidden;
-    gap: 75px;
-    margin: 50px 0;
+    overflow-y: visible;
+    width: 100%;
+  
+    .scroll-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      overflow: visible;
+      max-width: 100vw;
+      gap: 75px;
+      margin: 50px 0;
 
-    // Hide scrollbar 
-    // Chrome/Safari/Opera
-    /*&::-webkit-scrollbar {
-      display: none;
+      // Hide scrollbar 
+      // Chrome/Safari/Opera
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      //Firefox/Edge
+      -ms-overflow-style: none;
+      scrollbar-width: none; 
+    } 
+    
+    &__content {
+      position: relative;
     }
-    //Firefox/Edge
-    -ms-overflow-style: none;
-    scrollbar-width: none; */
-  } 
-  
-  &__content {
-    position: relative;
-  }
-  
+    
 
-  // Grey base image styling that colourises when hovered (nb using --img tag here does make it slightly limited in scope but i think it's simpler this way as i'm only using the mixin twice)
-  & .scroll-logo {
-    filter: grayscale(100);
-    height: 70px;
-    width: auto;
+    // Grey base image styling that colourises when hovered (nb using --img tag here does make it slightly limited in scope but i think it's simpler this way as i'm only using the mixin twice)
+    & .scroll-logo {
+      filter: grayscale(100);
+      height: 70px;
+      width: auto;
 
-    &:hover {
-      filter: none;
+      &:hover {
+        filter: none;
+      }
     }
   }
 }
