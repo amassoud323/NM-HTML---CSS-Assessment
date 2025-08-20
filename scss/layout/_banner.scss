@@ -19,6 +19,12 @@
     color: $white;
     text-align: center;
     justify-content: center;
+    @media (min-width: $brk--md) { 
+      text-align: left; 
+      min-width: $brk--md;
+      padding-top: 30px;
+      
+    }
 
     & h1 {
       font-size: 2.5rem;
@@ -45,11 +51,12 @@
       }
     } 
 
-    &--why-us {
+    &--button {
       @include button-base-style;
       @include button-icon;
-      @include button-hover; //START HERE THIS ISNT WORKING
+      --color: #{$violet-frog};
       background-color: var(--color);
+      @include button-hover;
       margin-top: 1.938rem;
       margin-bottom: 1.125rem;
       padding: 5px 20px;

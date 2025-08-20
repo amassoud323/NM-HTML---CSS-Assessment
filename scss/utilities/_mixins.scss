@@ -253,14 +253,16 @@
 
   button {
     height: 56px;
-    background-color: $manatee;
+    --color: #{$manatee};
+    background-color: var(--color);
+    @include button-hover;
     padding: 0 17px;
     border: none;
     border-radius: 0 3px 3px 0;
     box-shadow: 0 1px 1px rgba(0,0,0,.075);
     cursor: pointer;
     svg {
-      background-color: $manatee;
+      background-color: var(--color); // here i need to group together with the parent so they both darken together but can't work out how right now, come back
       fill: white;
       height: 100%;
       width: 23px;

@@ -33,6 +33,8 @@
 
     &--button {
       @include button-base-style;
+      --color: #{$colour-foot-btn};
+      @include button-hover;
       & svg {
         display: inline;
         vertical-align: middle;
@@ -71,19 +73,25 @@
         color: $white;
       }
     }
-
-    &--btn-review {
+      
+    &__button {
+      @include service-colors;
       @include button-base-style;
       @include button-icon;
-
+      background-color: var(--color);
+      @include button-hover;
+      
       @media (min-width: $brk--lg) {
         display: inline-flex;
         padding: 10px 24px;
       }
     }
+    
+    
 
     &--btn-google {
-      background-color: $seljuk-blue;
+      //--color: #{$seljuk-blue};
+      
 
       @media (min-width: $brk--lg) {
         margin-right: 5px;

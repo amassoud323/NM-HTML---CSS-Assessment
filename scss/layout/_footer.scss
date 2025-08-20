@@ -17,7 +17,6 @@ footer {
     h4 {
       text-transform: uppercase;
       font-size: 1rem;
-      // margin-bottom: em(26px);
       font-weight: $font-weight--medium;
     }
 
@@ -46,10 +45,15 @@ footer {
         }
       }
       .footer-socials {
+        &--facebook { --color: #3b5998; }
+        &--linkedin { --color: #0077b5; }
+        &--twitter { --color: #00aced; }
+        &--instagram { --color: #d93175; }
         background-color: $colour-foot-btn;
+        @include button-hover;
         padding: 14px 42px;
         margin: 0 10px 10px 0;
-        border: none;
+        border: 1px solid transparent;
         
         svg {
           fill: $white;

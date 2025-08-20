@@ -16,6 +16,7 @@
     max-width: 100%;
     margin-bottom: 30px;
     @include raise-up;
+    position: relative;
 
     img {
       width: 100%;
@@ -72,6 +73,22 @@
           line-height: 1.375rem;
         }
       }
+    }
+
+    &--tooltip {
+      &--insight { --color: #{$bay-view}; }
+      &--careers { --color: #{$magical-merlin}; }
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin-top: 10px;
+      background-color: var(--color);
+      color: $white;
+      text-transform: uppercase;
+      font-size: .75rem;
+      font-weight: $font-weight--bold;
+      padding: 1px 10px;
+      &:hover { text-decoration: underline; }
     }
 
     &--read-more {
@@ -137,4 +154,7 @@ h1 {
   @media (min-width: $brk--sm) {
     display: none;
   }
+
+  
+
 }

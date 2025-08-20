@@ -112,11 +112,12 @@
     align-items: center;
     align-content: center;
     justify-content: center;
-    background-color: $pauper;
+    --color: #{$pauper};
+    background-color: var(--color);
     height: 56px;
     padding: 10px 15px;
     border-radius: 3px;
-
+    @include button-hover(80%);
     &--bar {
       width: 33px;
       height: 4px;
