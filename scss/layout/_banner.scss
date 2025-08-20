@@ -45,15 +45,16 @@
       }
     } 
 
-    &--btn-welcome {
+    &--why-us {
       @include button-base-style;
       @include button-icon;
+      @include button-hover; //START HERE THIS ISNT WORKING
+      background-color: var(--color);
       margin-top: 1.938rem;
       margin-bottom: 1.125rem;
       padding: 5px 20px;
       line-height: 50px;
       border-radius: 3px;
-      background-color: $violet-frog;
       font-weight: $font-weight--medium;
     }
 

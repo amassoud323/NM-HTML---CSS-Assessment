@@ -50,6 +50,9 @@
   
   &__button {
     @include button-base-style;
+    @include service-colors;
+    @include button-hover;
+    background-color: var(--color);
     display: flex;
     align-items: center;
     padding: 10px 15px 10px 5px;
@@ -70,14 +73,6 @@
       }
     }
 
-    &--blue {
-      background-color: $magical-merlin;
-    }
-
-    &--grey {
-      background-color: $manatee  ;
-    }
-
     display: none;
 
     @media (min-width: $brk--md) {
@@ -88,6 +83,7 @@
   &__searchbar {
     &--desktop {
       display: none;
+
 
       @media (min-width: $brk--sm) {
         @include header-searchbar-mobile;
@@ -120,7 +116,7 @@
     height: 56px;
     padding: 10px 15px;
     border-radius: 3px;
-    
+
     &--bar {
       width: 33px;
       height: 4px;

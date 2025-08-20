@@ -1,15 +1,11 @@
-//COME BACK TO THIS -- IT DOESN'T WORK. might need a rewrite entirely or just tweaking
-
 .case-studies {
   @include logo-scrollbars;
-  //overflow: clip;
-
+  
   &__content {
     position: relative;
-    
 
     &--img {
-      max-height: 70px;
+      height: 70px;
       max-width: 200px;
       height: auto;
       object-fit: contain;
@@ -20,7 +16,7 @@
       z-index: 10;
       bottom: 100%;
       left: 50%;
-      margin-left: -100px;
+      transform: translateX(-50%);
       margin-bottom: 50px;
       visibility: hidden; 
       opacity: 0;
@@ -31,7 +27,7 @@
       text-align: center;
       padding: 5px;
       border: 1px solid transparent;
-      border-radius: 3px;
+      border-radius: 1px;
       .tooltip-arrow {
         width: 0;
         height: 0;
@@ -47,8 +43,24 @@
 
       .tooltip-text {
         padding: 12px;
-        h3 { font-size: 1.125rem; }
-        p { font-size: .8125rem; ;}
+
+        h3 { 
+          font-size: 1.125rem; 
+          font-weight: $font-weight--medium;
+          margin: 0;
+        }
+
+        p { 
+          font-size: .8125rem;
+          margin-bottom: 0;
+        }
+
+        a {
+          text-decoration: none;
+          font-weight: $font-weight--bold;
+          color: $white;
+        }
+
         .btn {
           @include button-base-style;
           @include service-colors;
@@ -57,12 +69,20 @@
           line-height: 1.1rem;
           padding: 10px;
           width: 100%;
-          vertical-align: middle;
+          border-radius: 3px;
+          padding: 5px 10px;
+          margin-bottom: 0;
+          margin-top: 13px;
           svg { 
             fill: $white; 
-            padding-left: 0 10px;
+            padding-left: 10px;
+            vertical-align: middle;
+            height: 40px;
+            width: 28px;
           }
         }
+
+        .empty { display: none; }
       }
       
     }

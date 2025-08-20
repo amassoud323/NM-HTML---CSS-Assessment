@@ -46,33 +46,21 @@
 @mixin logo-scrollbars {
 
   .scroll-wrapper {
-    //overflow-x: hidden;
-    overflow-y: visible;
+    overflow-x: clip;
     width: 100%;
+    position: relative;
   
     .scroll-container {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      overflow: visible;
-      max-width: 100vw;
       gap: 75px;
       margin: 50px 0;
-
-      // Hide scrollbar 
-      // Chrome/Safari/Opera
-      &::-webkit-scrollbar {
-        display: none;
-      }
-      //Firefox/Edge
-      -ms-overflow-style: none;
-      scrollbar-width: none; 
     } 
     
     &__content {
       position: relative;
     }
-    
 
     // Grey base image styling that colourises when hovered (nb using --img tag here does make it slightly limited in scope but i think it's simpler this way as i'm only using the mixin twice)
     & .scroll-logo {
@@ -152,6 +140,7 @@
   &--crimson { --color: #{$radical-red}; }
   &--red-brown { --color: #{$punch}; } 
   &--orange { --color: #{$glistening-dawn}; }
+  &--grey { --color: #{$manatee}; }
 }
 
 // Colour-codes services section for use in services and dropdown menu
@@ -204,6 +193,14 @@
   .dropdown__section--icon {
     background-color: var(--color);
     svg { fill: white; }
+  }
+}
+
+// Button hover properties
+@mixin button-hover($amount: 85%) {
+  @include service-colors;
+  &:hover {
+    background: color-mix(in srgb, var(--color) $amount, black);
   }
 }
 
