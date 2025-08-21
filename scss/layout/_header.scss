@@ -31,6 +31,10 @@
     }
 
     @media (min-width: $brk--md) {
+      max-width: 40%;
+    }
+
+    @media (min-width: $brk--lg) {
       max-width: 32%;
     }
   }
@@ -73,6 +77,8 @@
       }
     }
 
+    
+
     display: none;
 
     @media (min-width: $brk--md) {
@@ -93,8 +99,10 @@
       @media (min-width: $brk--md) {
         @include header-searchbar-mobile;
         @include header-searchbar-desktop;
-        width: 300px;
+        
       }
+
+      @media (min-width: $brk--lg) { width: 300px; }
     }
 
     &--mobile {
