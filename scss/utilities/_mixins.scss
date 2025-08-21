@@ -1,5 +1,4 @@
 // Button base styling
-
 @mixin button-base-style {
   display: inline-block;
   padding: 10px 30px;
@@ -20,7 +19,6 @@
 }
 
 // Button arrow styling
-
 @mixin button-icon {
   svg {
     display: inline;
@@ -40,10 +38,8 @@
   border-radius: 3px;
 }
 
-// Scrolling logo effect to emulate owl carousel without using JS
-
-// this might need a rewrite in conjunction with _case-studies
-@mixin logo-scrollbars {
+// Partners/case studies styling
+@mixin logo-scrollbars { //maybe slightly confusing naming here but i've left it as it should hopefully make more sense when adding scroll functionality in future
 
   .scroll-wrapper {
     overflow-x: clip;
@@ -98,7 +94,6 @@
 }
 
 // Icon styling
-
 @mixin icons {
   display: flex;  
   width: 65px;
@@ -115,7 +110,6 @@
 }
 
 // Paragraph text
-
 @mixin para-style {
   font-size: .8125rem;
   line-height: 1.375rem;
@@ -269,7 +263,7 @@
     box-shadow: 0 1px 1px rgba(0,0,0,.075);
     cursor: pointer;
     svg {
-      background-color: var(--color); // here i need to group together with the parent so they both darken together but can't work out how right now, come back
+      background-color: var(--color); 
       fill: white;
       height: 100%;
       width: 23px;

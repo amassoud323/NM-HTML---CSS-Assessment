@@ -112,11 +112,11 @@
 
   .hiring {
     @media (min-width: $brk--sm) {
-      visibility: collapse;
+      display: none;
     }
 
     @media (min-width: $brk--lg) {
-      visibility: visible;
+      display: block;
     }
   }
 
