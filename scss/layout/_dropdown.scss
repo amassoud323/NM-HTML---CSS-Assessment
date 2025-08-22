@@ -48,7 +48,7 @@ nav {
       &::after {
         @include triangle;
         border-color: var(--color) transparent transparent transparent;
-        top: 93%;
+        top: 90%;
       }
 
       &:hover::after { 
