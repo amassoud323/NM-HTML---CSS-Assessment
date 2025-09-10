@@ -16,6 +16,9 @@
   letter-spacing: $base--letter-spacing;
   line-height: 35px;
   cursor: pointer;
+  text-decoration: none;
+  width: fit-content;
+      margin: 0 auto;
 }
 
 // Button arrow styling
@@ -173,7 +176,7 @@
     svg { fill: var(--color); }
   }
 
-  button {
+  a {
     background-color: $white;
     color: var(--color);
   }
@@ -249,7 +252,13 @@
     border: 1px solid $grey;
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
     @media (min-width: $brk--md) and (max-width: $brk--lg) { display: none; }
-    
+  }
+
+  input[name="search"]:focus,
+  input[name="search"]:focus-visible { 
+    border-color :#5bc0de; 
+    outline: none; 
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(91,192,222,.6); 
   }
 
   button {
@@ -280,12 +289,17 @@
       border-radius: 3px;
     }
   }
+
+  &:focus {
+    border-color: #5bc0de;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(91,192,222,.6);
+  }
 }
 
 // Triangles
 @mixin triangle {
   content: "";
-  position: absolute;
+  position: absolute; 
   top: 100%;
   left: 0;
   transform: translateX(-50%);

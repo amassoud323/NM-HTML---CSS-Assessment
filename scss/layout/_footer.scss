@@ -141,6 +141,10 @@ footer {
     }
 
     @media (min-width: $brk--md) {
+      width: 970px;
+    }
+
+    @media (min-width: $brk--lg) {
       width: 1200px;
     }
   }
@@ -162,9 +166,11 @@ footer {
     margin: 0;
 
     @media (min-width: $brk--sm) {
-      list-style-type: "— ";
+      list-style-type: "- ";
       margin-left: 5px;
     }
+
+    
   }
 
   .copyright-text a {

@@ -48,6 +48,10 @@ nav {
       &::after {
         @include triangle;
         border-color: var(--color) transparent transparent transparent;
+        border-width: 35px 67px 0 67px;
+        @media (min-width: $brk--lg) {
+          border-width: 30px 85.5px 0 85.5px;
+        }
       }
 
       &:hover::after { 
@@ -117,22 +121,31 @@ nav {
   &--crimson-dark { --color: #{$red-ribbon}; }
   &--red-brown-dark { --color: #{$cognac}; }
 
-  background-color: var(--color);
-  width: 110vw;
-  position: fixed;
-  overflow: visible;
-  display: none;
-  color: $white;
-  top: 211px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: none;
-  margin: 0 auto;
-  z-index: 10;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  text-transform: none;
-  text-align: left; 
+  @media (min-width: $brk--md) {
+    background-color: var(--color);
+    position: fixed;
+    overflow: visible;
+    display: none;
+    color: $white;
+    transform: translateX(-50%);
+    display: none;
+    margin: 0 auto;
+    z-index: 10;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-transform: none;
+    text-align: left; 
+    width: 100vw;
+    top: 229px;
+    left: 50%;
+    .dropdown__section__menu { width: 85%; }
+  }
+
+  @media (min-width: $brk--lg) {
+    top: 211px;
+    left: 50%; 
+    .dropdown__section__menu { width: 1200px; }
+  }
 
   a {
     text-decoration: none;
