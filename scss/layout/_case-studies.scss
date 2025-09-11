@@ -10,8 +10,7 @@
       height: auto;
       object-fit: contain;
     }
-
-    &--tooltip {
+    .tooltip-wrapper {
       position: absolute;
       z-index: 10;
       bottom: 100%;
@@ -22,6 +21,17 @@
       opacity: 0;
       transition: opacity 0.1s;
       width: 280px;
+    }
+    .tooltip-wrapper::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -56px;
+      height: 56px;
+      z-index: 10;
+    }
+    .case-studies__content--tooltip {
       background-color: $colour-foot-bg;
       color: $white;
       text-align: center;
@@ -64,6 +74,7 @@
         .btn {
           @include button-base-style;
           @include service-colors;
+          @include button-hover;
           background-color: var(--color);
           font-size: 16px;
           line-height: 1.1rem;
@@ -83,23 +94,10 @@
         }
         .empty { display: none; }
       }
-    }
-    .tooltip-wrapper {
-      position: relative;
-      display: inline-block;
-      z-index: 0;
-    }
-    .tooltip-wrapper::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -40px;
-      height: 40px;
-      z-index: 10;
+    
     }
 
-    &--img:hover ~ &--tooltip { 
+    &--img:hover ~ .tooltip-wrapper, .tooltip-wrapper:hover { 
         visibility: visible;
         opacity: 1;
     }

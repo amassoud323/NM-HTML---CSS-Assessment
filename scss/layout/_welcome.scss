@@ -35,6 +35,7 @@
     &--button {
       @include button-base-style;
       padding: 10px 25px;
+      margin: 5px 0;
       --color: #{$colour-foot-btn};
       @include button-hover;
       & svg {
@@ -86,6 +87,7 @@
       flex-wrap: nowrap;
       overflow: visible;
       justify-content: space-between;
+      margin: 5px 0;
       
       @media (min-width: $brk--lg) {
         display: inline-flex;

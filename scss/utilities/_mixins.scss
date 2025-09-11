@@ -235,6 +235,12 @@
     color: $colour-foot-btn;
     margin: 0 3px;
   }
+
+  input[name="search"]:focus,
+  input[name="search"]:focus-visible {
+    outline: none; 
+    box-shadow: 0 0 3px #fff;
+  }
 }
 
 @mixin header-searchbar-desktop {
