@@ -1,24 +1,34 @@
 // == COOKIES ==
 
-var modal = document.getElementById("cookies");
-var btn = document.getElementById("manageCookies");
-var accept = document.getElementById("close");
+var cookies = document.getElementById("cookies");
+var cookiesBtn = document.getElementById("manageCookies");
+var cookiesAccept = document.getElementById("close");
 
 // if user has already accepted cookies, don't display if yes
 if (localStorage.getItem("cookieConsent") === "true") {
-  modal.style.display = "none";
+  cookies.style.display = "none";
 } else {
-  modal.style.display = "flex";
+  cookies.style.display = "flex";
 }
 
-// open modal if user clicks manage consent button
-btn.onclick = function() {
-  modal.style.display = "flex";
+// open cookies if user clicks manage consent button
+cookiesBtn.onclick = function() {
+  cookies.style.display = "flex";
 }
 
-// save and close the modal if user accepts
-accept.onclick = function() {
+// save and close the cookies if user accepts
+cookiesAccept.onclick = function() {
   localStorage.setItem("cookieConsent", "true");
-  modal.style.display = "none";
+  cookies.style.display = "none";
+}
+
+
+// == SIDEBAR ==
+var sidebar = document.getElementById("sidebar");
+var hamburger = document.getElementById("hamburger");
+
+// open sidebar if user clicks hamburger button
+hamburger.onclick = function() {
+  sidebar.classList.toggle("active");
 }
 
