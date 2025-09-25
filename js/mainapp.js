@@ -26,9 +26,11 @@ cookiesAccept.onclick = function() {
 // == SIDEBAR ==
 var sidebar = document.getElementById("sidebar");
 var hamburger = document.getElementById("hamburger");
+var main = document.getElementById("main");
 
 // open sidebar if user clicks hamburger button
 hamburger.onclick = function() {
+  main.classList.toggle("active");
   sidebar.classList.toggle("active");
 }
 
