@@ -138,6 +138,7 @@
   &--red-brown { --color: #{$punch}; } 
   &--orange { --color: #{$glistening-dawn}; }
   &--grey { --color: #{$manatee}; }
+  &--yellow { --color: #{$glistening-dawn}; }
 }
 
 // Colour-codes services section for use in services and dropdown menu
@@ -155,6 +156,14 @@
     }
   }
 
+// Implements button colours specifically
+@mixin button-colours {
+  @include button-base-style;
+  @include button-icon;
+  @include button-hover;
+  @include service-colors;
+  background-color: var(--color);
+}
 // Inverts icon colours specifically for dropdown
 @mixin invert-dropdown-colours () {
   background-color: $pauper;

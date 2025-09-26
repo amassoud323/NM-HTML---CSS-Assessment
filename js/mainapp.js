@@ -1,5 +1,4 @@
 // == COOKIES ==
-
 var cookies = document.getElementById("cookies");
 var cookiesBtn = document.getElementById("manageCookies");
 var cookiesAccept = document.getElementById("close");
@@ -34,3 +33,14 @@ hamburger.onclick = function() {
   sidebar.classList.toggle("active");
 }
 
+// == BANNER OWL CAROUSEL ==
+// $(document).ready(function(){
+//   $('.owl-carousel').owlCarousel();
+// });
+$('.owl-carousel').owlCarousel({
+  items: 1,
+  loop: true,
+  dots: true,
+  autoplay: true,
+  autoplayTimeout: 5000
+});

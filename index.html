@@ -8,8 +8,8 @@
 
   <link rel="stylesheet" href="icomoon/style.css">
   <link rel="stylesheet" href="css/application.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
   <link rel="icon" type="image/x-icon" href="img/icons/favicon.ico">
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -282,12 +282,75 @@
   </nav>
 
   <main>
-    <div class="banner">
-      <div class="banner__content">
-        <!-- <img class="banner-bg-img" src="img/banner-nm-building.png" alt="Netmatters office building"> long term will have to insert background for banner slides this way but can't get it to work in time for current deadline -->
-        <h1>The East of England's Leading Technology Company</h1>
-        <p>Performance-driven digital and technology services<span class="banner__content--mq-break"><br></span> with complete transparency.</p>
-        <a href="#" target="_blank" class="banner__content--button button--purple">Why choose us?<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M19.414 27.414l10-10c0.781-0.781 0.781-2.047 0-2.828l-10-10c-0.781-0.781-2.047-0.781-2.828 0s-0.781 2.047 0 2.828l6.586 6.586h-19.172c-1.105 0-2 0.895-2 2s0.895 2 2 2h19.172l-6.586 6.586c-0.39 0.39-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414c0.781 0.781 2.047 0.781 2.828 0z"></path></svg></a>
+    <div class="owl-carousel owl-theme">
+      <div class="bannerSlide">
+        <img class="banner-bg-img" src="img/banner/banner-nm-building.png" alt="Netmatters office building">
+        <span class="gradient"></span>
+        <div class="bannerSlide__content">
+          <h1>The East of England's Leading Technology Company</h1>
+          <p>Performance-driven digital and technology services<span class="bannerSlide__content--mq-break"><br></span> with complete transparency.</p>
+          <a href="#" target="_blank" class="bannerSlide__content--button bannerSlide__content--button--purple">Why choose us?<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M19.414 27.414l10-10c0.781-0.781 0.781-2.047 0-2.828l-10-10c-0.781-0.781-2.047-0.781-2.828 0s-0.781 2.047 0 2.828l6.586 6.586h-19.172c-1.105 0-2 0.895-2 2s0.895 2 2 2h19.172l-6.586 6.586c-0.39 0.39-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414c0.781 0.781 2.047 0.781 2.828 0z"></path></svg></a>
+        </div>
+      </div>
+
+      <div class="bannerSlide">
+        <img class="banner-bg-img" src="img/banner/banner-bespoke-software.jpg" alt="Bespoke Software">
+        <span class="gradient"></span>
+        <div class="bannerSlide__content">
+          <h1>Bespoke Software</h1>
+          <p>Delivering expert bespoke software<span class="bannerSlide__content--mq-break"><br></span>solutions across a range of industries.</p>
+          <a href="#" target="_blank" class="bannerSlide__content--button bannerSlide__content--button--yellow">Find out more<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M19.414 27.414l10-10c0.781-0.781 0.781-2.047 0-2.828l-10-10c-0.781-0.781-2.047-0.781-2.828 0s-0.781 2.047 0 2.828l6.586 6.586h-19.172c-1.105 0-2 0.895-2 2s0.895 2 2 2h19.172l-6.586 6.586c-0.39 0.39-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414c0.781 0.781 2.047 0.781 2.828 0z"></path></svg></a>
+        </div>
+      </div>
+
+      <div class="bannerSlide">
+        <img class="banner-bg-img" src="img/banner/banner-it-support.png" alt="IT Support">
+        <span class="gradient"></span>
+        <div class="bannerSlide__content">
+          <h1>IT Support</h1>
+          <p>Fast and cost-effective IT support<span class="bannerSlide__content--mq-break"><br></span>services for your business.</p>
+          <a href="#" target="_blank" class="bannerSlide__content--button bannerSlide__content--button--blue">Find out more<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M19.414 27.414l10-10c0.781-0.781 0.781-2.047 0-2.828l-10-10c-0.781-0.781-2.047-0.781-2.828 0s-0.781 2.047 0 2.828l6.586 6.586h-19.172c-1.105 0-2 0.895-2 2s0.895 2 2 2h19.172l-6.586 6.586c-0.39 0.39-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414c0.781 0.781 2.047 0.781 2.828 0z"></path></svg></a>
+        </div>
+      </div>
+
+      <div class="bannerSlide">
+        <img class="banner-bg-img" src="img/banner/banner-digital-marketing.png" alt="Digital Marketing">
+        <span class="gradient"></span>
+        <div class="bannerSlide__content">
+          <h1>Digital Marketing</h1>
+          <p>Generating your new business through<span class="bannerSlide__content--mq-break"><br></span>results-driven marketing activities.</p>
+          <a href="#" target="_blank" class="bannerSlide__content--button bannerSlide__content--button--green">Find out more<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M19.414 27.414l10-10c0.781-0.781 0.781-2.047 0-2.828l-10-10c-0.781-0.781-2.047-0.781-2.828 0s-0.781 2.047 0 2.828l6.586 6.586h-19.172c-1.105 0-2 0.895-2 2s0.895 2 2 2h19.172l-6.586 6.586c-0.39 0.39-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414c0.781 0.781 2.047 0.781 2.828 0z"></path></svg></a>
+        </div>
+      </div>
+
+      <div class="bannerSlide">
+        <img class="banner-bg-img" src="img/banner/banner-telecoms-services.png" alt="Telecoms Services">
+        <span class="gradient"></span>
+        <div class="bannerSlide__content">
+          <h1>Telecoms Services</h1>
+          <p>A new approach to connectivity, see<span class="bannerSlide__content--mq-break"><br></span>how we can help your business.</p>
+          <a href="#" target="_blank" class="bannerSlide__content--button bannerSlide__content--button--red">Find out more<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M19.414 27.414l10-10c0.781-0.781 0.781-2.047 0-2.828l-10-10c-0.781-0.781-2.047-0.781-2.828 0s-0.781 2.047 0 2.828l6.586 6.586h-19.172c-1.105 0-2 0.895-2 2s0.895 2 2 2h19.172l-6.586 6.586c-0.39 0.39-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414c0.781 0.781 2.047 0.781 2.828 0z"></path></svg></a>
+        </div>
+      </div>
+
+      <div class="bannerSlide">
+        <img class="banner-bg-img" src="img/banner/banner-web-design.jpg" alt="Web Design">
+        <span class="gradient"></span>
+        <div class="bannerSlide__content">
+          <h1>Web Design</h1>
+          <p>For businesses looking to make a strong<span class="bannerSlide__content--mq-break"><br></span>and effective first impression.</p>
+          <a href="#" target="_blank" class="bannerSlide__content--button bannerSlide__content--button--purple">Find out more<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M19.414 27.414l10-10c0.781-0.781 0.781-2.047 0-2.828l-10-10c-0.781-0.781-2.047-0.781-2.828 0s-0.781 2.047 0 2.828l6.586 6.586h-19.172c-1.105 0-2 0.895-2 2s0.895 2 2 2h19.172l-6.586 6.586c-0.39 0.39-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414c0.781 0.781 2.047 0.781 2.828 0z"></path></svg></a>
+        </div>
+      </div>
+
+      <div class="bannerSlide">
+        <img class="banner-bg-img" src="img/banner/banner-cyber-security.png" alt="Cyber Security">
+        <span class="gradient"></span>
+        <div class="bannerSlide__content">
+          <h1>Cyber Security</h1>
+          <p>FoKeeping businesses and their customers<span class="bannerSlide__content--mq-break"><br></span>sensitive information protected.</p>
+          <a href="#" target="_blank" class="bannerSlide__content--button bannerSlide__content--button--crimson">Find out more<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M19.414 27.414l10-10c0.781-0.781 0.781-2.047 0-2.828l-10-10c-0.781-0.781-2.047-0.781-2.828 0s-0.781 2.047 0 2.828l6.586 6.586h-19.172c-1.105 0-2 0.895-2 2s0.895 2 2 2h19.172l-6.586 6.586c-0.39 0.39-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414c0.781 0.781 2.047 0.781 2.828 0z"></path></svg></a>
+        </div>
       </div>
     </div>
 
@@ -1026,6 +1089,8 @@
     </ul>
   </div>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script src="js/mainapp.js"></script>
 </body>
 </html>
