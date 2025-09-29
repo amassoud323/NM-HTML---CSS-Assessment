@@ -63,7 +63,7 @@
     font-size: 1.125rem;
     border-radius: 3px;
     letter-spacing: 1px;
-    margin-bottom: 0;
+    margin: 0;
     
     &--icon {
       @include icons;
@@ -123,6 +123,9 @@
     height: 56px;
     padding: 10px 15px;
     border-radius: 3px;
+    transition-property: opacity, filter;
+    transition-duration: .15s;
+    transition-timing-function: linear;
     @include button-hover(80%);
     &--bar {
       width: 33px;
@@ -130,6 +133,15 @@
       margin: 3px 0;
       background-color: $white;
       justify-content: center;
+      transition: 
+        transform 0.35s cubic-bezier(.4,0,.2,1),
+        opacity 0.25s cubic-bezier(.4,0,.2,1);
+    }
+
+    &.active {
+      .header__menu-button--bar:nth-child(1) { transform: translateY(10px) rotate(45deg); }
+      .header__menu-button--bar:nth-child(2) { opacity: 0; pointer-events: none; }
+      .header__menu-button--bar:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
     }
   }
 }

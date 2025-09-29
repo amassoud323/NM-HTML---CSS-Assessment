@@ -1,5 +1,7 @@
 nav {
   background-color: $colour-foot-bg;
+  position: relative;
+  width: 100%;
 }
 
 .dropdown {
@@ -128,7 +130,8 @@ nav {
     color: $white;
     transform: translateX(-50%);
     display: none;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     z-index: 10;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -142,8 +145,12 @@ nav {
 
   @media (min-width: $brk--lg) {
     top: 211px;
-    left: 50%; 
-    .dropdown__section__menu { width: 1200px; }
+    left: 50%;
+    width: 100vw;
+    .dropdown__section__menu { 
+      width: 1200px; 
+      margin: auto;
+    }
   }
 
   a {
