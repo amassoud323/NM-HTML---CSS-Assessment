@@ -34,10 +34,10 @@ hamburger.onclick = function() {
   hamburger.classList.toggle("active");
 }
 
-// == BANNER OWL CAROUSEL ==
 
+// == BANNER OWL CAROUSEL ==
 // base carousel function
-var owl = $(".owl-carousel");
+var owl = $(".banner-carousel");
 
 owl.owlCarousel({
   items: 1,
@@ -64,6 +64,7 @@ owl.on("translated.owl.carousel dragged.owl.carousel", function() {
     owl.trigger("play.owl.autoplay", [5000]);
   }, 1000);
 });
+
 
 // == HEADER SEARCHBAR ANIMATION == 
 $("#desktopSearchBtn").on("click", function() {
@@ -93,4 +94,36 @@ $(window).on("resize", function() {
     $(".header__button").css("display", "");
     $("#desktopSearch").css("display", "");
   }
+});
+
+
+// == LOGO SCROLLBARS ==
+$(".partners-carousel").owlCarousel({
+  loop: true,
+  dots: false,
+  nav: true,
+  margin: 75,
+  autoWidth: true,
+  items: 1,
+  autoplay: true,
+  autoplayTimeout: 5000
+});
+
+
+// == STICKY HEADER ==
+let lastScroll = 0;
+const header = $("#stickyHeader");
+
+$(window).on("scroll", function() {
+  const currentScroll = $(this).scrollTop();
+
+  if (currentScroll > lastScroll && currentScroll > 250) {
+    // scrolling up
+    header.addClass("hide");
+  } else {
+    //scrolling down
+    header.removeClass("hide");
+  }
+
+  lastScroll = currentScroll;
 });

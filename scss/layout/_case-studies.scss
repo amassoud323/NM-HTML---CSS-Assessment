@@ -1,7 +1,7 @@
 .case-studies {
   @include logo-scrollbars;
   
-  &__content {
+  .case-studies__content {
     position: relative;
 
     &--img {
@@ -21,6 +21,7 @@
       opacity: 0;
       transition: opacity 0.1s;
       width: 280px;
+      pointer-events: none;
     }
     .tooltip-wrapper::after {
       content: "";
@@ -94,12 +95,15 @@
         }
         .empty { display: none; }
       }
-    
-    }
-
-    &--img:hover ~ .tooltip-wrapper, .tooltip-wrapper:hover { 
-        visibility: visible;
-        opacity: 1;
     }
   } 
+}
+
+.owl-stage-outer { overflow: visible !important; }
+
+.owl-item .case-studies__content:hover .tooltip-wrapper,
+.owl-item.cloned .case-studies__content:hover .tooltip-wrapper {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
 }

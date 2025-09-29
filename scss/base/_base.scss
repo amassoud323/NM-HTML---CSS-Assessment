@@ -13,6 +13,7 @@ body {
   font-size: 1rem;
   letter-spacing: .4px;
   color: $dark-grey;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -38,3 +39,4 @@ body {
   }
 }
 
+#body { margin-top: 211px;}

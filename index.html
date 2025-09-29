@@ -27,13 +27,13 @@
       </div>
     </div>
   </div>
-    <button id="manageCookies">Manage Consent</button>
-  </div>
+  <button id="manageCookies">Manage Consent</button>
 
   <div id="main">
+  <div id="stickyHeader">
   <header>
     <div class="container">
-      <div class="header">
+       <div class="header">
         <div class="header--row">
           <div class="header__logo">
             <a href="#" target="_blank"><img src="img/nm-logo-dark.webp" alt="Netmatters logo"></a>
@@ -59,7 +59,7 @@
                 <path d="M11.016 1.078v7.922h-7.031q0-3.047 2.039-5.297t4.992-2.625zM3.984 15v-3.984h16.031v3.984q0 3.281-2.367 5.648t-5.648 2.367-5.648-2.367-2.367-5.648zM12.984 1.078q2.953 0.375 4.992 2.625t2.039 5.297h-7.031v-7.922z"></path>
               </symbol>
             </svg>
-          </div>Support
+         </div>Support
           </a>
 
           <a href="#" target="_blank" class="header__button header__button--grey">
@@ -281,9 +281,11 @@
       </div>
     </div>
   </nav>
+  </div>
 
   <main>
-    <div class="owl-carousel owl-theme">
+    <div id="body">
+    <div class="owl-carousel owl-theme banner-carousel">
       <div class="bannerSlide">
         <img class="banner-bg-img" src="img/banner/banner-nm-building.png" alt="Netmatters office building">
         <span class="gradient"></span>
@@ -440,22 +442,22 @@
 
       </div>
     </div>
-
+    
     <div class="partners">
       <div class="scroll-wrapper">
-        <div class="scroll-container">
-          <img class="partners--img scroll-logo" src="img/partners/google-partner-colour.jpg" alt="Google Partner">
-          <img class="partners--img scroll-logo" src="img/partners/GBC-colour.png" alt="Good Business Charter Accredited">
-          <img class="partners--img scroll-logo" src="img/partners/norfolk-prohelp-colour.png" alt="Norfolk ProHelp">
-          <img class="partners--img scroll-logo" src="img/partners/investing-in-future-growth-colour.jpg" alt="Investing in Future Growth Winner 2021">
-          <img class="partners--img scroll-logo" src="img/partners/norfolk-carbon-charter-colour.jpg" alt="Norfolk Carbon Charter Gold 2021">
-          <img class="partners--img scroll-logo" src="img/partners/PPC-colour.jpg" alt="Prompt Payment Code">
-          <img class="partners--img scroll-logo" src="img/partners/princess-royal-training-colour.png" alt="Princess Royal Training Award 2023">
-          <img class="partners--img scroll-logo" src="img/partners/future50-colour.jpg" alt="Future 50 Member">
-          <img class="partners--img scroll-logo" src="img/partners/iso9001-colour.png" alt="ISO Quality Management Certification">
-          <img class="partners--img scroll-logo" src="img/partners/iso27001-colour.png" alt="ISO Information Security Management Certification">
-          <img class="partners--img scroll-logo" src="img/partners/skills-of-tomorrow-colour.jpg" alt="Skills of Tomorrow Winner">
-          <img class="partners--img scroll-logo" src="img/partners/cyber-essentials-colour.jpg" alt="Cyber Essentials">
+        <div class="scroll-container owl-carousel partners-carousel">
+          <div class="item"><img class="partners--img scroll-logo" src="img/partners/google-partner-colour.jpg" alt="Google Partner"></div>
+          <div class="item"><img class="partners--img scroll-logo" src="img/partners/GBC-colour.png" alt="Good Business Charter Accredited"></div>
+          <div class="item"><img class="partners--img scroll-logo" src="img/partners/norfolk-prohelp-colour.png" alt="Norfolk ProHelp"></div>
+          <div class="item"><img class="partners--img scroll-logo" src="img/partners/investing-in-future-growth-colour.jpg" alt="Investing in Future Growth Winner 2021"></div>
+          <div class="item"><img class="partners--img scroll-logo" src="img/partners/norfolk-carbon-charter-colour.jpg" alt="Norfolk Carbon Charter Gold 2021"></div>
+          <div class="item"><img class="partners--img scroll-logo" src="img/partners/PPC-colour.jpg" alt="Prompt Payment Code"></div>
+          <div class="item"><img class="partners--img scroll-logo" src="img/partners/princess-royal-training-colour.png" alt="Princess Royal Training Award 2023"></div>
+          <div class="item"><img class="partners--img scroll-logo" src="img/partners/future50-colour.jpg" alt="Future 50 Member"></div>
+          <div class="item"><img class="partners--img scroll-logo" src="img/partners/iso9001-colour.png" alt="ISO Quality Management Certification"></div>
+          <div class="item"><img class="partners--img scroll-logo" src="img/partners/iso27001-colour.png" alt="ISO Information Security Management Certification"></div>
+          <div class="item"><img class="partners--img scroll-logo" src="img/partners/skills-of-tomorrow-colour.jpg" alt="Skills of Tomorrow Winner"></div>
+          <div class="item"><img class="partners--img scroll-logo" src="img/partners/cyber-essentials-colour.jpg" alt="Cyber Essentials"></div>
         </div>
       </div>
     </div>
@@ -583,7 +585,7 @@
 
     <div class="case-studies">
       <div class="scroll-wrapper">
-        <div class="scroll-container">
+        <div class="scroll-container owl-carousel partners-carousel">
           <div class="case-studies__content">
             <img class="case-studies__content--img scroll-logo" src="img/case-studies/black_swan.png" alt="Black Swan Care Group">
             <div class="tooltip-wrapper"><div class="case-studies__content--tooltip">
@@ -1089,7 +1091,7 @@
       </li>
     </ul>
   </div>
-
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script src="js/mainapp.js"></script>
